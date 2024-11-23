@@ -11,8 +11,7 @@ const { obtenerUsuarios, eliminarUsuario } = require('./usuarios');
 const validar = require('./Validar');
 const saltRounds = 10;
 const myPlaintextPassword = 's0/\/\P4$$w0rD';
-mysql://root:DfKwPEFOxpHhRqLRGhTTlsVCgdisWsQY@junction.proxy.rlwy.net:33348/railway
-
+mysql://root:sliMAPheUYbTCnoiAFxfntAohyiIajwF@junction.proxy.rlwy.net:28211/railway
 app.use(cors({
   origin: process.env.URLFRONTEND || 'http://localhost:5173',
   credentials: true
