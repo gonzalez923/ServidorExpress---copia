@@ -8,5 +8,8 @@
   },
   "script": {
     "dev": "node --watch app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }

@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000
+const port = 3000
 // Get the client
 const cors = require('cors')
 const session = require('express-session')
@@ -13,15 +13,11 @@ const saltRounds = 10;
 const myPlaintextPassword = 's0/\/\P4$$w0rD';
 //mysql://root:sliMAPheUYbTCnoiAFxfntAohyiIajwF@junction.proxy.rlwy.net:28211/railway
 app.use(cors({
-  origin: process.env.URLFRONTEND || 'http://localhost:5173',
+  origin: 'http://localhost:5173',
   credentials: true
 }))
 app.use(session({
-  secret: process.env.SECRETSESSION || 'sasaDNADKIJSD', proxy: process.env.NODE_ENV === 'production',
-  cookie:{
-    secure:process.env.NODE_ENV === 'production',
-    sameSite:'none'
-  }
+  secret: 'sasaDNADKIJSD' 
 }))
 app.get('/', (req, res) => {
   res.send('Hello World!')
