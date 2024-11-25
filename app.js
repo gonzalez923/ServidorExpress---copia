@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.port || 3000
 // Get the client
 const cors = require('cors')
 const session = require('express-session')
@@ -11,7 +11,7 @@ const { obtenerUsuarios, eliminarUsuario } = require('./usuarios');
 const validar = require('./Validar');
 const saltRounds = 10;
 //const myPlaintextPassword = 's0/\/\P4$$w0rD';
-//mysql://root:sliMAPheUYbTCnoiAFxfntAohyiIajwF@junction.proxy.rlwy.net:28211/railway
+//mysql://root:oWZuqKufCKyqKxNLEILfZvwnvoZbPPHT@autorack.proxy.rlwy.net:51361/railway
 app.use(cors({
   origin: process.env.URLFRONTEND || 'http://localhost:5173',
   credentials: true
