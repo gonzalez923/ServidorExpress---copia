@@ -13,16 +13,20 @@ const saltRounds = 10;
 //const myPlaintextPassword = 's0/\/\P4$$w0rD';
 //mysql://root:sliMAPheUYbTCnoiAFxfntAohyiIajwF@junction.proxy.rlwy.net:28211/railway
 app.use(cors({
-  origin: process.env.URLFRONTEND || 'http://localhost:5173',
+  origin: 'http://localhost:5173',
   credentials: true
 }))
 app.use(session({
+<<<<<<< HEAD
   secret: process.env.SECRETSESSION || 'sasaDNADKIJSD',
   proxy: process.env.NODE_ENV === 'production',
   cookie: {
     secure : process.env.NODE_ENV ==='production',
     sameSite: 'none'
   } 
+=======
+  secret: 'sasaDNADKIJSD' 
+>>>>>>> 911a2442dd2c9195004a34b64fd7bd45de94f555
 }))
 app.get('/', (req, res) => {
   res.send('Hello World!')
